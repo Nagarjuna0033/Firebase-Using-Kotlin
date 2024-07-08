@@ -6,15 +6,15 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 
 
-class MainActivity : ComponentActivity() {
+
+class LogInActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        val loginViewModel = LoginViewModel()
+
         setContent {
-
-                    SignIn(this)
-
-
+            LogIn(loginViewModel,this)
         }
     }
 }
